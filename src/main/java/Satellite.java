@@ -1,6 +1,10 @@
+enum Type {
+    PLANET
+}
+
 public class Satellite {
 
-    String type = "planet";
+    Enum type = Type.PLANET;
     String name;
 
     public Satellite (String name) {
