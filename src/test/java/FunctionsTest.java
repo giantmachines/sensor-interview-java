@@ -1,64 +1,75 @@
-import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-public class SensorTest {
+public class FunctionsTest {
 
-  private Sensor sensor;
+  @Test
+  public void onlyEven() {
+    int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-  @Before
-  public void createSensor() {
+    int[] result = Functions.onlyEven(array);
 
-    sensor = new Sensor(1, 10, new int[]{-2, 8, 5, 3, 8, 8, 1, 15});
-
+    assertArrayEquals(new int[]{2, 4, 6, 8, 10}, result);
   }
 
   @Test
-  public void TestInstance() {
-    assertEquals(sensor.getLower(), 1, 0);
-    assertEquals(sensor.getHigher(), 10, 0);
-    assertEquals(sensor.getOutput().length, 6, 0);
-    assertEquals(sensor.toString(), "1,3,5,8,8,8");
+  public void mean() {
+    int[] array = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34};
 
+    double result = Functions.mean(array);
+
+    assertEquals(8.8, result, 0);
   }
 
   @Test
-  public void TestMean() {
+  public void sortByNumber() {
+    int[] array = {21, 3, 11, 4, 9, 19, 36, 18, 61, 55};
 
-    double meanResult = sensor.findMean();
+    int[] result = Functions.sortByNumber(array);
 
-    assertEquals(5.5, meanResult, 0);
-
+    assertArrayEquals(new int[]{3, 4, 9, 11, 18, 19, 21, 36, 55, 61}, result);
   }
 
   @Test
-  public void TestMedian1() {
+  public void sortByName() {
+    Satellite mercury = new Satellite("Mercury");
+    Satellite neptune = new Satellite("Neptune");
+    Satellite jupiter = new Satellite("Jupiter");
+    Satellite earth= new Satellite("Earth");
+    Satellite[] array = {mercury, neptune, jupiter, earth};
 
-    double medianResult = sensor.findMedian();
+    Satellite[] result = Functions.sortByName(array);
 
-    assertEquals(6.5, medianResult, 0);
-
+    assertArrayEquals(new Satellite[]{earth, jupiter, mercury, neptune}, result);
   }
 
   @Test
-  public void TestMedian2() {
+  public void medianEvenLength() {
+    int[] array = {5, 0, 1, 3, 1, 8, 2};
 
-    sensor = new Sensor(1, 10, new int[]{-2, 8, 5, 3, 8, 1, 15})
+    double result = Functions.median(array);
 
-    double medianResult = sensor.findMedian();
-
-    assertEquals(5, medianResult, 0);
-
+    assertEquals(2, result, 0);
   }
 
   @Test
-  public void TestMode() {
+  public void medianOddLength() {
+    int[] array = {5, 0, 1, 3, 1, 13, 8, 2};
 
-    int modeResult = sensor.findMode();
+    double result = Functions.median(array);
 
-    assertEquals(8, modeResult, 0);
+    assertEquals(2.5, result, 0);
+  }
 
+  @Test
+  public void mode() {
+    int[] array = {0, 1, 1, 3, 4, 5, 5, 6, 6, 6, 7, 8, 8, 9};
+
+    double result = Functions.mode(array);
+
+    assertEquals(6, result, 0);
   }
 
 }

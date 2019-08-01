@@ -1,36 +1,27 @@
-public class Sensor {
+public  class Functions {
 
-  private int lower;
-  private int higher;
-  private int[] buffer;
-
-  Sensor(int lower, int higher, int[] buffer) {
-
+  public static int[] onlyEven(int[] array) {
+    return array;
   }
 
-  public double findMean() {
+  public static double mean(int[] array) {
     return 0;
   }
 
-  public double findMedian() {
+  public static int[] sortByNumber(int[] array) {
+    return array;
+  }
+
+  public static Satellite[] sortByName(Satellite[] array) {
+    return array;
+  }
+
+  public static double median(int[] array) {
     return 0;
   }
 
-  public int findMode() {
+  public static double mode(int[] array) {
     return 0;
-  }
-
-
-  public int getLower() {
-    return lower;
-  }
-
-  public int getHigher() {
-    return higher;
-  }
-
-  public int[] getBuffer() {
-    return buffer;
   }
 
 }
