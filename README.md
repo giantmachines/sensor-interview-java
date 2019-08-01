@@ -1,6 +1,6 @@
-Sensor class can be constructed with the arguments for higher and lower limits and an input array called buffer.
+Functions class can be constructed with the arguments for higher and lower limits and an input array called buffer.
 
-Your job is to complete the Sensor class so the tests in SensorTest pass.
+Your job is to complete the Functions class so the tests in FunctionsTest pass.
 
 Requirements: Java 8, maven
 
