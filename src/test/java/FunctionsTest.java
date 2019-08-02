@@ -32,18 +32,18 @@ public class FunctionsTest {
     assertArrayEquals(new int[]{3, 4, 9, 11, 18, 19, 21, 36, 55, 61}, result);
   }
 
-  // @Test
-  // public void sortByName() {
-  //   Satellite mercury = new Satellite("Mercury");
-  //   Satellite neptune = new Satellite("Neptune");
-  //   Satellite jupiter = new Satellite("Jupiter");
-  //   Satellite earth= new Satellite("Earth");
-  //   Satellite[] array = {mercury, neptune, jupiter, earth};
+  @Test
+  public void sortByName() {
+    Satellite mercury = new Satellite("Mercury");
+    Satellite neptune = new Satellite("Neptune");
+    Satellite jupiter = new Satellite("Jupiter");
+    Satellite earth= new Satellite("Earth");
+    Satellite[] array = {mercury, neptune, jupiter, earth};
 
-  //   Satellite[] result = Functions.sortByName(array);
+    Satellite[] result = Functions.sortByName(array);
 
-  //   assertArrayEquals(new Satellite[]{earth, jupiter, mercury, neptune}, result);
-  // }
+    assertArrayEquals(new Satellite[]{earth, jupiter, mercury, neptune}, result);
+  }
 
   @Test
   public void medianEvenLength() {

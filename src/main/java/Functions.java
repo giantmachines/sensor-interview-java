@@ -40,6 +40,19 @@ public  class Functions {
   }
 
   public static Satellite[] sortByName(Satellite[] array) {
+    boolean sorted = false;
+    Satellite tmp;
+    while (!sorted) {
+      sorted = true;
+      for (int i = 0; i < array.length -1; i++) {
+        if ((int) array[i].name.charAt(0) > (int) array[i+1].name.charAt(0)) {
+          tmp = array[i];
+          array[i] = array[i+1];
+          array[i+1] = tmp;
+          sorted = false;
+        }
+      }
+    }
     return array;
   }
 
