@@ -28,6 +28,7 @@ public  class Functions {
     while (!sorted) {
       sorted = true;
       for (int i = 0; i < array.length -1; i++) {
+
         if (array[i] > array[i+1]) {
           tmp = array[i];
           array[i] = array[i+1];
@@ -45,6 +46,7 @@ public  class Functions {
     while (!sorted) {
       sorted = true;
       for (int i = 0; i < array.length -1; i++) {
+
         if ((int) array[i].name.charAt(0) > (int) array[i+1].name.charAt(0)) {
           tmp = array[i];
           array[i] = array[i+1];
@@ -59,6 +61,7 @@ public  class Functions {
   public static double median(int[] array) {
     int[] sortedArray = sortByNumber(array);
     int midIndex = sortedArray.length / 2;
+
     if (sortedArray.length % 2 != 0) {
       return sortedArray[midIndex];
     } 
@@ -68,14 +71,15 @@ public  class Functions {
   public static double mode(int[] array) {
     int[] counts = new int[array.length];
 
-    for(int i = 0; i < array.length; i++){
+    for(int i = 0; i < array.length; i++) {
       counts[array[i]]++;
     }
 
     int mode = counts[0];
     int modeIndex = 0;
-    for(int i = 1; i < counts.length; i++){
-      if(counts[i] > mode){
+
+    for(int i = 1; i < counts.length; i++) {
+      if(counts[i] > mode) {
         mode = counts[i];
         modeIndex = i;
       }
