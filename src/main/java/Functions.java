@@ -46,15 +46,28 @@ public  class Functions {
   public static double median(int[] array) {
     int[] sortedArray = sortByNumber(array);
     int midIndex = sortedArray.length / 2;
-    System.out.println(midIndex);
+    System.out.println(midIndex); 
     if (sortedArray.length % 2 != 0) {
       return sortedArray[midIndex];
     } 
     return (sortedArray[midIndex] + sortedArray[midIndex - 1]) / (double) 2;
   }
 
-  public static double mode(int[] sortedArray) {
-    return 0;
-  }
+  public static double mode(int[] array) {
+    int[] counts = new int[array.length];
 
+    for(int i = 0; i < array.length; i++){
+      counts[array[i]]++;
+    }
+
+    int mode = counts[0];
+    int modeIndex = 0;
+    for(int i = 1; i < counts.length; i++){
+      if(counts[i] > mode){
+        mode = counts[i];
+        modeIndex = i;
+      }
+    }
+    return modeIndex;
+  }
 }
