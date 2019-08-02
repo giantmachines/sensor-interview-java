@@ -59,7 +59,6 @@ public  class Functions {
   public static double median(int[] array) {
     int[] sortedArray = sortByNumber(array);
     int midIndex = sortedArray.length / 2;
-    System.out.println(midIndex); 
     if (sortedArray.length % 2 != 0) {
       return sortedArray[midIndex];
     } 
