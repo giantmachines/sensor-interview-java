@@ -19,7 +19,7 @@ public  class Functions {
     for (int i = 0; i < array.length; i++) {
       sum += array[i];
     }
-    return sum / (double) array.length;
+    return (double) sum / (double) array.length;
   }
 
   public static int[] sortByNumber(int[] array) {
@@ -30,9 +30,9 @@ public  class Functions {
       for (int i = 0; i < array.length -1; i++) {
 
         if (array[i] > array[i+1]) {
-          tmp = array[i];
+          tempSatellite = array[i];
           array[i] = array[i+1];
-          array[i+1] = tmp;
+          array[i+1] = tempSatellite;
           sorted = false;
         }
       }
