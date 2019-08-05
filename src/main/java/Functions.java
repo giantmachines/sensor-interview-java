@@ -2,15 +2,15 @@ public  class Functions {
 
   public static int[] onlyEven(int[] array) {
     int evenIndex = 0;
-    int[] tmpArray = new int[array.length];
+    int[] tempArray = new int[array.length];
 
     for (int i = 0; i < array.length; i++) {
       if (array[i] % 2 == 0) {
-        tmpArray[evenIndex++] = array[i];
+        tempArray[evenIndex++] = array[i];
       } 
     }
     int[] evenArray = new int[evenIndex];
-    System.arraycopy(tmpArray, 0, evenArray, 0, evenIndex);
+    System.arraycopy(tempArray, 0, evenArray, 0, evenIndex);
     return evenArray;
   }
 
@@ -24,7 +24,7 @@ public  class Functions {
 
   public static int[] sortByNumber(int[] array) {
     boolean sorted = false;
-    int tmp;
+    int tempSatellite;
     while (!sorted) {
       sorted = true;
       for (int i = 0; i < array.length -1; i++) {
@@ -42,15 +42,15 @@ public  class Functions {
 
   public static Satellite[] sortByName(Satellite[] array) {
     boolean sorted = false;
-    Satellite tmp;
+    Satellite tempSatellite;
     while (!sorted) {
       sorted = true;
       for (int i = 0; i < array.length -1; i++) {
 
         if ((int) array[i].name.charAt(0) > (int) array[i+1].name.charAt(0)) {
-          tmp = array[i];
+          tempSatellite = array[i];
           array[i] = array[i+1];
-          array[i+1] = tmp;
+          array[i+1] = tempSatellite;
           sorted = false;
         }
       }
