@@ -47,20 +47,20 @@ public class FunctionsTest {
 
   @Test
   public void medianEvenLength() {
-    int[] array = {5, 0, 1, 3, 1, 8, 2};
-
-    double result = Functions.median(array);
-
-    assertEquals(2, result, 0);
-  }
-
-  @Test
-  public void medianOddLength() {
     int[] array = {5, 0, 1, 3, 1, 13, 8, 2};
 
     double result = Functions.median(array);
 
     assertEquals(2.5, result, 0);
+  }
+
+  @Test
+  public void medianOddLength() {
+    int[] array = {5, 0, 1, 3, 1, 8, 2};
+
+    double result = Functions.median(array);
+
+    assertEquals(2, result, 0);
   }
 
   @Test
@@ -73,3 +73,4 @@ public class FunctionsTest {
   }
 
 }
+  
