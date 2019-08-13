@@ -7,7 +7,7 @@ public class FunctionsTest {
 
   @Test
   public void onlyEven() {
-    int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int[] array = {1, 2, 3, 4, 6, 5, 7, 8, 9, 10};
 
     int[] result = Functions.onlyEven(array);
 
