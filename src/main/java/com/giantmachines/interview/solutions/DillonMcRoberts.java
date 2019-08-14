@@ -1,6 +1,10 @@
+package com.giantmachines.interview.solutions;
+
+import com.giantmachines.interview.Planet;
+
 public  class DillonMcRoberts {
 
-  public static int[] onlyEven(int[] array) {
+  public static int[] findEvenElements(int[] array) {
     int evenIndex = 0;
     int[] tempArray = new int[array.length];
 
@@ -14,7 +18,7 @@ public  class DillonMcRoberts {
     return evenArray;
   }
 
-  public static double mean(int[] array) {
+  public static double calculateAverage(int[] array) {
     int sum = 0;
     for (int i = 0; i < array.length; i++) {
       sum += array[i];
@@ -40,14 +44,14 @@ public  class DillonMcRoberts {
     return array;
   }
 
-  public static Satellite[] sortByName(Satellite[] array) {
+  public static Planet[] sortByName(Planet[] array) {
     boolean sorted = false;
-    Satellite tempSatellite;
+    Planet tempSatellite;
     while (!sorted) {
       sorted = true;
       for (int i = 0; i < array.length -1; i++) {
 
-        if ((int) array[i].name.charAt(0) > (int) array[i+1].name.charAt(0)) {
+        if ((int) array[i].toString().charAt(0) > (int) array[i+1].name.charAt(0)) {
           tempSatellite = array[i];
           array[i] = array[i+1];
           array[i+1] = tempSatellite;
@@ -58,7 +62,7 @@ public  class DillonMcRoberts {
     return array;
   }
 
-  public static double median(int[] array) {
+  public static double findMedian(int[] array) {
     int[] sortedArray = sortByNumber(array);
     int midIndex = sortedArray.length / 2;
 
@@ -68,7 +72,7 @@ public  class DillonMcRoberts {
     return (sortedArray[midIndex] + sortedArray[midIndex - 1]) / (double) 2;
   }
 
-  public static double mode(int[] array) {
+  public static double findMode(int[] array) {
     int[] counts = new int[array.length];
 
     for(int i = 0; i < array.length; i++) {
