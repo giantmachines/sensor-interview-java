@@ -1,7 +1,5 @@
-Sensor class can be constructed with the arguments for higher and lower limits and an input array called buffer.
+FunctionsTest class targets the individual methods inside Functions class with some input parameters. Your job is to provide method implementations inside Functions class to have the tests pass. 
 
-Your job is to complete the Sensor class so the tests in SensorTest pass.
-
-Requirements: Java 8, maven
+Requirements: Java 11, maven
 
 ```mvn clean test```
