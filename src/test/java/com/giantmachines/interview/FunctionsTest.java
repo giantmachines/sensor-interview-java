@@ -10,7 +10,7 @@ public class FunctionsTest {
   @Test
   public void testFindEvenElements() {
 
-    int[] input = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int[] input = {1, 2, 3, 4, 6, 5, 7, 8, 9, 10};
 
     int[] result = Functions.findEvenElements(input);
 
