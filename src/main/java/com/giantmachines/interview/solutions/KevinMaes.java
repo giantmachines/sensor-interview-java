@@ -24,7 +24,7 @@ public class KevinMaes {
     }
 
     public static Planet[] sortByName(Planet[] planets) {
-        String[] ids = new String[planets.length];
+        String[] sortIds = new String[planets.length];
 
         for (int i = 0; i < planets.length; i++) {
             Planet planet = planets[i];
@@ -32,10 +32,10 @@ public class KevinMaes {
             int code = name.charAt(0);
             String id = String.valueOf(code) + ":" + String.valueOf(i);
 
-            ids[i] = String.valueOf(id);
+            sortIds[i] = String.valueOf(id);
         }
 
-        Object[] sorted = Arrays.stream(ids).sorted().toArray();
+        Object[] sorted = Arrays.stream(sortIds).sorted().toArray();
 
         Planet[] sortedPlanets = new Planet[sorted.length];
 
