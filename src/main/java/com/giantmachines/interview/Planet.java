@@ -2,8 +2,14 @@ package com.giantmachines.interview;
 
 public enum Planet {
 
-  MERCURY("Mercury"), VENUS("Venus"), EARTH("Earth"), MARS("Mars"), JUPITER("Jupiter"), SATURN("Saturn"),
-  URANUS("Uranus"), NEPTUNE("Neptune");
+  MERCURY("Mercury"),
+  VENUS("Venus"),
+  EARTH("Earth"),
+  MARS("Mars"),
+  JUPITER("Jupiter"),
+  SATURN("Saturn"),
+  URANUS("Uranus"),
+  NEPTUNE("Neptune");
 
   public String name;
 
