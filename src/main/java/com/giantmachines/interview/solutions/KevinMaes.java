@@ -49,15 +49,15 @@ public class KevinMaes {
 
     public static double findMedian(int[] input) {
         int[] sorted = Arrays.stream(input).sorted().toArray();
+        int middleIndex = sorted.length / 2;
 
         if (input.length % 2 == 0) {
-            int middleIndex = sorted.length / 2;
             int sum = sorted[middleIndex - 1] + sorted[middleIndex];
 
             return (double) sum / 2;
         }
 
-        double index = Math.floor(sorted.length / 2);
+        double index = Math.floor(middleIndex);
 
         return sorted[(int) index];
     }
