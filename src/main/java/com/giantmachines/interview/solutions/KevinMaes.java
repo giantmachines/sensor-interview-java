@@ -33,7 +33,6 @@ public class KevinMaes {
             String id = String.valueOf(code) + ":" + String.valueOf(i);
 
             ids[i] = String.valueOf(id);
-            System.out.println(id);
         }
 
         Object[] sorted = Arrays.stream(ids).sorted().toArray();
@@ -92,9 +91,6 @@ public class KevinMaes {
                 mostCommon = sorted[i];
             }
         }
-
-        // System.out.println(highestCount);
-        // System.out.println(mostCommon);
 
         return mostCommon;
     }
