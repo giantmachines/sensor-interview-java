@@ -1,9 +1,6 @@
 package com.giantmachines.interview.solutions;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 import com.giantmachines.interview.Planet;
 
