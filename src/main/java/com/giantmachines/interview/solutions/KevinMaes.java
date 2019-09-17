@@ -82,7 +82,7 @@ public class KevinMaes {
                 currentCount = 1;
             } else {
                 // Same as previous number.
-                currentCount = currentCount + 1;
+                currentCount++;
             }
 
             // Evaluate this number's standing.
