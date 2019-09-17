@@ -51,9 +51,8 @@ public class KevinMaes {
         int[] sorted = Arrays.stream(input).sorted().toArray();
 
         if (input.length % 2 == 0) {
-            int index1 = sorted.length / 2 - 1;
-            int index2 = sorted.length / 2;
-            int sum = sorted[index1] + sorted[index2];
+            int middleIndex = sorted.length / 2;
+            int sum = sorted[middleIndex - 1] + sorted[middleIndex];
 
             return (double) sum / 2;
         }
