@@ -6,6 +6,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 // import static org.junit.Assert.assertNull;
 
+import java.util.Arrays;
+
 import com.giantmachines.interview.solutions.KevinMaes;
 
 public class FunctionsTest {
@@ -40,17 +42,15 @@ public class FunctionsTest {
     assertArrayEquals(new int[] { 3, 4, 9, 11, 18, 19, 21, 36, 55, 61 }, result);
   }
 
-  // @Test
-  // public void testSortByName() {
+  @Test
+  public void testSortByName() {
 
-  // Planet[] planets = { Planet.MERCURY, Planet.NEPTUNE, Planet.JUPITER,
-  // Planet.EARTH };
+    Planet[] planets = { Planet.MERCURY, Planet.NEPTUNE, Planet.JUPITER, Planet.EARTH };
 
-  // Planet[] result = KevinMaes.sortByName(planets);
+    Planet[] result = KevinMaes.sortByName(planets);
 
-  // assertArrayEquals(new Planet[] { Planet.EARTH, Planet.JUPITER,
-  // Planet.MERCURY, Planet.NEPTUNE }, result);
-  // }
+    assertArrayEquals(new Planet[] { Planet.EARTH, Planet.JUPITER, Planet.MERCURY, Planet.NEPTUNE }, result);
+  }
 
   @Test
   public void testFindMedian1() {

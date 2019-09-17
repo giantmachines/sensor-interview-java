@@ -1,5 +1,6 @@
 package com.giantmachines.interview.solutions;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -23,12 +24,28 @@ public class KevinMaes {
     }
 
     public static Planet[] sortByName(Planet[] planets) {
-        // int[] sorted = new ArrayList<Planet>();
+        String[] ids = new String[planets.length];
 
-        // return Collections.sort(planets, (a, b) -> a - b);
-        // Planet[] planetsByName = Arrays.stream(planets).sorted().toArray();
-        // System.out.println(String.valueOf(arr));
-        return planets;
+        for (int i = 0; i < planets.length; i++) {
+            Planet planet = planets[i];
+            String name = planet.toString();
+            int code = name.charAt(0);
+            String id = String.valueOf(code) + ":" + String.valueOf(i);
+
+            ids[i] = String.valueOf(id);
+            System.out.println(id);
+        }
+
+        Object[] sorted = Arrays.stream(ids).sorted().toArray();
+
+        Planet[] sortedPlanets = new Planet[sorted.length];
+
+        for (int j = 0; j < sorted.length; j++) {
+            String[] idParts = String.valueOf(sorted[j]).split(":");
+            sortedPlanets[j] = planets[Integer.valueOf(idParts[1])];
+        }
+
+        return sortedPlanets;
     }
 
     public static double findMedian(int[] input) {
