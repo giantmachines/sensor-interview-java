@@ -48,7 +48,40 @@ public class KevinMaes {
     }
 
     public static double findMode(int[] input) {
-        return 0;
+        int thisCount = 1;
+        int highestCount = 0;
+        int mostCommon = -1;
+
+        // sort the array.
+        int[] sorted = Arrays.stream(input).sorted().toArray();
+
+        for (int i = 0; i < sorted.length; i++) {
+            if (i == 0) {
+                mostCommon = sorted[i];
+                continue;
+            }
+
+            if (sorted[i] != sorted[i - 1]) {
+                // Number has changed.
+                thisCount = 1;
+
+            } else {
+                // Same as previous number.
+                thisCount = thisCount + 1;
+            }
+
+            // Evaluate this number's standing.
+            if (thisCount > highestCount) {
+                // New most common found.
+                highestCount = thisCount;
+                mostCommon = sorted[i];
+            }
+        }
+
+        System.out.println(highestCount);
+        System.out.println(mostCommon);
+
+        return mostCommon;
     }
 
 }

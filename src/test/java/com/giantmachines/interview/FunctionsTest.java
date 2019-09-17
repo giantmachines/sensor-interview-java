@@ -72,14 +72,14 @@ public class FunctionsTest {
     assertEquals(2, result, 0);
   }
 
-  // @Test
-  // public void testFindMode() {
+  @Test
+  public void testFindMode() {
 
-  // int[] input = {0, 1, 1, 3, 4, 5, 5, 6, 6, 6, 7, 8, 8, 9};
+    int[] input = { 0, 1, 1, 3, 4, 5, 5, 6, 6, 6, 7, 8, 8, 9 };
 
-  // double result = KevinMaes.findMode(input);
+    double result = KevinMaes.findMode(input);
 
-  // assertEquals(6, result, 0);
-  // }
+    assertEquals(6, result, 0);
+  }
 
 }
