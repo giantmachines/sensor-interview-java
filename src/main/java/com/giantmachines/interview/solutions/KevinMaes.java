@@ -83,9 +83,8 @@ public class KevinMaes {
                 currentCount++;
             }
 
-            // Evaluate this number's standing.
+            // Check for new highest count.
             if (currentCount > highestCount) {
-                // New most common found.
                 highestCount = currentCount;
                 mostCommon = sorted[i];
             }
