@@ -30,47 +30,47 @@ public class FunctionsTest {
     assertEquals(8.8, result, 0);
   }
 
-  // @Test
-  // public void testSortByNumber() {
+  @Test
+  public void testSortByNumber() {
 
-  // int[] input = {21, 3, 11, 4, 9, 19, 36, 18, 61, 55};
+    int[] input = { 21, 3, 11, 4, 9, 19, 36, 18, 61, 55 };
 
-  // int[] result = KevinMaes.sortByNumber(input);
+    int[] result = KevinMaes.sortByNumber(input);
 
-  // assertArrayEquals(new int[]{3, 4, 9, 11, 18, 19, 21, 36, 55, 61}, result);
-  // }
+    assertArrayEquals(new int[] { 3, 4, 9, 11, 18, 19, 21, 36, 55, 61 }, result);
+  }
 
   // @Test
   // public void testSortByName() {
 
-  // Planet[] planets = {Planet.MERCURY, Planet.NEPTUNE, Planet.JUPITER,
-  // Planet.EARTH};
+  // Planet[] planets = { Planet.MERCURY, Planet.NEPTUNE, Planet.JUPITER,
+  // Planet.EARTH };
 
   // Planet[] result = KevinMaes.sortByName(planets);
 
-  // assertArrayEquals(new Planet[]{Planet.EARTH, Planet.JUPITER, Planet.MERCURY,
-  // Planet.NEPTUNE}, result);
+  // assertArrayEquals(new Planet[] { Planet.EARTH, Planet.JUPITER,
+  // Planet.MERCURY, Planet.NEPTUNE }, result);
   // }
 
-  // @Test
-  // public void testFindMedian1() {
+  @Test
+  public void testFindMedian1() {
 
-  // int[] input = {5, 0, 1, 3, 1, 13, 8, 2};
+    int[] input = { 5, 0, 1, 3, 1, 13, 8, 2 };
 
-  // double result = KevinMaes.findMedian(input);
+    double result = KevinMaes.findMedian(input);
 
-  // assertEquals(2.5, result, 0);
-  // }
+    assertEquals(2.5, result, 0);
+  }
 
-  // @Test
-  // public void testFindMedian2() {
+  @Test
+  public void testFindMedian2() {
 
-  // int[] input = {5, 0, 1, 3, 1, 8, 2};
+    int[] input = { 5, 0, 1, 3, 1, 8, 2 };
 
-  // double result = KevinMaes.findMedian(input);
+    double result = KevinMaes.findMedian(input);
 
-  // assertEquals(2, result, 0);
-  // }
+    assertEquals(2, result, 0);
+  }
 
   // @Test
   // public void testFindMode() {

@@ -1,8 +1,10 @@
 package com.giantmachines.interview.solutions;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
-// import com.giantmachines.interview.Planet;s
+import com.giantmachines.interview.Planet;
 
 public class KevinMaes {
 
@@ -17,15 +19,32 @@ public class KevinMaes {
     }
 
     public static int[] sortByNumber(int[] input) {
-        return input;
+        return Arrays.stream(input).sorted().toArray();
     }
 
     // public static Planet[] sortByName(Planet[] planets) {
-    // return planets;
+    // int[] sorted = new ArrayList<Planet>();
+
+    // // return Collections.sort(planets, (a, b) -> a - b);
+    // // Planet[] planetsByName = Arrays.stream(planets).sorted().toArray();
+    // // System.out.println(String.valueOf(arr));
+    // // return planetsByName;
     // }
 
     public static double findMedian(int[] input) {
-        return 0;
+        int[] sorted = Arrays.stream(input).sorted().toArray();
+
+        if (input.length % 2 == 0) {
+            int index1 = sorted.length / 2 - 1;
+            int index2 = sorted.length / 2;
+            int sum = sorted[index1] + sorted[index2];
+
+            return (double) sum / 2;
+        }
+
+        double index = Math.floor(sorted.length / 2);
+
+        return sorted[(int) index];
     }
 
     public static double findMode(int[] input) {
