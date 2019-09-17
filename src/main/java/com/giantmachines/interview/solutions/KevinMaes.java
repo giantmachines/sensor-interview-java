@@ -76,11 +76,9 @@ public class KevinMaes {
             }
 
             if (sorted[i] != sorted[i - 1]) {
-                // Number has changed.
-                currentCount = 1;
+                currentCount = 1; // New number, reset count.
             } else {
-                // Same as previous number.
-                currentCount++;
+                currentCount++; // Same number, increment count of previous number.
             }
 
             // Check for new highest count.
