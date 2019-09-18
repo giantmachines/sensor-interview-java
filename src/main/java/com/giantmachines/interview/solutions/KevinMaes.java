@@ -7,17 +7,22 @@ import com.giantmachines.interview.Planet;
 public class KevinMaes {
 
     public static int[] findEvenElements(int[] input) {
-        return Arrays.stream(input).filter(n -> n % 2 == 0).toArray();
+        return Arrays.stream(input)
+            .filter(n -> n % 2 == 0)
+            .toArray();
     }
 
     public static double calculateAverage(int[] input) {
-        double sum = Arrays.stream(input).reduce(0, (acc, n) -> acc + n);
+        double sum = Arrays.stream(input)
+            .reduce(0, (acc, n) -> acc + n);
 
         return sum / input.length;
     }
 
     public static int[] sortByNumber(int[] input) {
-        return Arrays.stream(input).sorted().toArray();
+        return Arrays.stream(input)
+            .sorted()
+            .toArray();
     }
 
     public static Planet[] sortByName(Planet[] planets) {
@@ -42,7 +47,9 @@ public class KevinMaes {
     }
 
     public static double findMedian(int[] input) {
-        int[] sorted = Arrays.stream(input).sorted().toArray();
+        int[] sorted = Arrays.stream(input)
+            .sorted()
+            .toArray();
         int middleIndex = sorted.length / 2;
 
         if (input.length % 2 == 0) {
@@ -58,7 +65,9 @@ public class KevinMaes {
 
     public static double findMode(int[] input) {
         // sort the array.
-        int[] sorted = Arrays.stream(input).sorted().toArray();
+        int[] sorted = Arrays.stream(input)
+            .sorted()
+            .toArray();
 
         int currentCount = 1;
         int highestCount = 0;
