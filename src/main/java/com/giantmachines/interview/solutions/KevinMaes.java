@@ -25,19 +25,16 @@ public class KevinMaes {
 
         for (int i = 0; i < planets.length; i++) {
             Planet planet = planets[i];
-            String name = planet.toString();
-            char code = name.charAt(0);
-            String id = String.valueOf(code) + ":" + String.valueOf(i);
-
+            String id = planet.toString() + ":" + String.valueOf(i);
             sortIds[i] = String.valueOf(id);
         }
 
-        Object[] sorted = Arrays.stream(sortIds).sorted().toArray();
+        Object[] sortedIds = Arrays.stream(sortIds).sorted().toArray();
 
-        Planet[] sortedPlanets = new Planet[sorted.length];
+        Planet[] sortedPlanets = new Planet[sortedIds.length];
 
-        for (int j = 0; j < sorted.length; j++) {
-            String[] idParts = String.valueOf(sorted[j]).split(":");
+        for (int j = 0; j < sortedIds.length; j++) {
+            String[] idParts = ((String) sortedIds[j]).split(":");
             sortedPlanets[j] = planets[Integer.valueOf(idParts[1])];
         }
 
