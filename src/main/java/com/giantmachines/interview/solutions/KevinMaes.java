@@ -72,11 +72,7 @@ public class KevinMaes {
         int highestCount = 0;
         int mostCommon = sorted[0];
 
-        for (int i = 0; i < sorted.length; i++) {
-            if (i == 0) {
-                continue;
-            }
-
+        for (int i = 1; i < sorted.length; i++) {
             if (sorted[i] != sorted[i - 1]) {
                 currentCount = 1; // New number, reset count.
             } else {
