@@ -6,9 +6,13 @@ import com.giantmachines.interview.Planet;
 
 public class KevinMaes {
 
+    public static Boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+
     public static int[] findEvenElements(int[] input) {
         return Arrays.stream(input)
-            .filter(n -> n % 2 == 0)
+            .filter(num -> KevinMaes.isEven(num))
             .toArray();
     }
 
@@ -50,7 +54,7 @@ public class KevinMaes {
         int[] sorted = KevinMaes.sortByNumber(input);
         int middleIndex = sorted.length / 2;
 
-        if (input.length % 2 == 0) {
+        if (KevinMaes.isEven(input.length)) {
             double sum = sorted[middleIndex - 1] + sorted[middleIndex];
             return sum / 2;
         }
