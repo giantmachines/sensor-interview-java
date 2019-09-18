@@ -53,9 +53,8 @@ public class KevinMaes {
         int middleIndex = sorted.length / 2;
 
         if (input.length % 2 == 0) {
-            int sum = sorted[middleIndex - 1] + sorted[middleIndex];
-
-            return (double) sum / 2;
+            double sum = sorted[middleIndex - 1] + sorted[middleIndex];
+            return sum / 2;
         }
 
         double index = Math.floor(middleIndex);
