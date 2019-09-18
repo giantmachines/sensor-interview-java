@@ -47,9 +47,7 @@ public class KevinMaes {
     }
 
     public static double findMedian(int[] input) {
-        int[] sorted = Arrays.stream(input)
-            .sorted()
-            .toArray();
+        int[] sorted = KevinMaes.sortByNumber(input);
         int middleIndex = sorted.length / 2;
 
         if (input.length % 2 == 0) {
@@ -64,9 +62,7 @@ public class KevinMaes {
 
     public static double findMode(int[] input) {
         // sort the array.
-        int[] sorted = Arrays.stream(input)
-            .sorted()
-            .toArray();
+        int[] sorted = KevinMaes.sortByNumber(input);
 
         int currentCount = 1;
         int highestCount = 0;
