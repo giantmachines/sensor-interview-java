@@ -14,7 +14,7 @@ public class KevinMaes {
 
     public static double calculateAverage(int[] input) {
         double sum = Arrays.stream(input)
-            .reduce(0, (acc, n) -> acc + n);
+            .reduce(0, Integer::sum);
 
         return sum / input.length;
     }
