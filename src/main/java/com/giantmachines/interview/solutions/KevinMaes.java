@@ -26,7 +26,7 @@ public class KevinMaes {
         for (int i = 0; i < planets.length; i++) {
             Planet planet = planets[i];
             String name = planet.toString();
-            int code = name.charAt(0);
+            char code = name.charAt(0);
             String id = String.valueOf(code) + ":" + String.valueOf(i);
 
             sortIds[i] = String.valueOf(id);
