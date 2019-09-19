@@ -1,9 +1,9 @@
 package com.giantmachines.interview;
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import com.giantmachines.interview.solutions.JohnnyAraujo;
 
 public class FunctionsTest {
 
@@ -12,7 +12,7 @@ public class FunctionsTest {
 
     int[] input = {1, 2, 3, 4, 6, 5, 7, 8, 9, 10};
 
-    int[] result = Functions.findEvenElements(input);
+    int[] result = JohnnyAraujo.findEvenElements(input);
 
     assertArrayEquals(new int[]{2, 4, 6, 8, 10}, result);
   }
@@ -22,7 +22,7 @@ public class FunctionsTest {
 
     int[] input = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34};
 
-    double result = Functions.calculateAverage(input);
+    double result = JohnnyAraujo.calculateAverage(input);
 
     assertEquals(8.8, result, 0);
   }
@@ -32,7 +32,7 @@ public class FunctionsTest {
 
     int[] input = {21, 3, 11, 4, 9, 19, 36, 18, 61, 55};
 
-    int[] result = Functions.sortByNumber(input);
+    int[] result = JohnnyAraujo.sortByNumber(input);
 
     assertArrayEquals(new int[]{3, 4, 9, 11, 18, 19, 21, 36, 55, 61}, result);
   }
@@ -42,7 +42,7 @@ public class FunctionsTest {
 
     Planet[] planets = {Planet.MERCURY, Planet.NEPTUNE, Planet.JUPITER, Planet.EARTH};
 
-    Planet[] result = Functions.sortByName(planets);
+    Planet[] result = JohnnyAraujo.sortByName(planets);
 
     assertArrayEquals(new Planet[]{Planet.EARTH, Planet.JUPITER, Planet.MERCURY, Planet.NEPTUNE}, result);
   }
@@ -52,7 +52,7 @@ public class FunctionsTest {
 
     int[] input = {5, 0, 1, 3, 1, 13, 8, 2};
 
-    double result = Functions.findMedian(input);
+    double result = JohnnyAraujo.findMedian(input);
 
     assertEquals(2.5, result, 0);
   }
@@ -62,7 +62,7 @@ public class FunctionsTest {
 
     int[] input = {5, 0, 1, 3, 1, 8, 2};
 
-    double result = Functions.findMedian(input);
+    double result = JohnnyAraujo.findMedian(input);
 
     assertEquals(2, result, 0);
   }
@@ -72,7 +72,7 @@ public class FunctionsTest {
 
     int[] input = {0, 1, 1, 3, 4, 5, 5, 6, 6, 6, 7, 8, 8, 9};
 
-    double result = Functions.findMode(input);
+    double result = JohnnyAraujo.findMode(input);
 
     assertEquals(6, result, 0);
   }
